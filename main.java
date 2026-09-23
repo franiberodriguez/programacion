@@ -95,29 +95,52 @@
 //Crea un programa que pida al usuario un numero secreto
 // El programa  desde seguir pidiendo el numero
 
+// import java.util.Scanner;
+
+// public class Ejercicio6 {
+//       public static void main(String[] args) {
+//         Scanner scanner = new Scanner(System.in);
+//         int numeroSecreto = 69;
+//         int intento;
+
+//         System.out.println("Adivina el numero secreto");
+
+//         do{
+//            System.out.println("Introduce un numero");
+//            intento = scanner.nextInt();
+           
+//            if (intento < numeroSecreto) {
+//             System.out.println("El numero secreto es mayor. Intenta de nuevo");
+//         }else if (intento > numeroSecreto) {
+//             System.out.println("El numero secreto es menor. Intenta de nuevo");
+//         } else {
+//             System.out.println("¡Felicidades! Has adivinado el número secreto");
+//       }
+//         } while (intento != numeroSecreto);
+
+//          scanner.close();
+//       }
+// }
+
 import java.util.Scanner;
 
-public class Ejercicio6 {
-      public static void main(String[] args) {
+public class Ejercicio7 {
+    public static boolean esMayorDeEdad(int edad) {
+       return edad >= 18;
+    }
+    
+    public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-        int numeroSecreto = 69;
-        int intento;
 
-        System.out.println("Adivina el numero secreto");
+        System.out.println("Introduce tu edad: ");
+        int edad = scanner.nextInt();
 
-        do{
-           System.out.println("Introduce un numero");
-           intento = scanner.nextInt();
-           
-           if (intento < numeroSecreto) {
-            System.out.println("El numero secreto es mayor. Intenta de nuevo");
-        }else if (intento > numeroSecreto) {
-            System.out.println("El numero secreto es menor. Intenta de nuevo");
+        if (esMayorDeEdad(edad)) {
+            System.out.println("Eres mayorcito ya!!!!");
         } else {
-            System.out.println("¡Felicidades! Has adivinado el número secreto");
-      }
-        } while (intento != numeroSecreto);
-
-         scanner.close();
-      }
+            System.out.println("Eres un bebé, fuera de aqui... ");
+        }
+        scanner.close();
+    }
+    
 }
