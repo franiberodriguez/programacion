@@ -64,30 +64,60 @@
 
 
 // Pide al usuario que inroduzca una nota numerica del 0 al 10 (puede llevar decimales)
-// y muestre su calificacion segun la escala estandar
+// // y muestre su calificacion segun la escala estandar
+
+// import java.util.Scanner;
+
+// class Ejercicio5 {
+//     public static void main(String[] args) {
+
+//         Scanner scanner = new Scanner(System.in);
+
+//         System.out.println("Introduce una nota del 0 al 10:");
+//         double nota = scanner.nextDouble();
+
+//         if (nota < 0 || nota > 10) {
+//             System.out.println("La nota no es válida.");
+//         } else if (nota < 5) {
+//             System.out.println("Suspenso");
+//         } else if (nota < 7) {
+//             System.out.println("Aprobado");
+//         } else if (nota < 9) {
+//             System.out.println("Notable");
+//         } else {
+//             System.out.println("Sobresaliente");
+//         }
+
+//         scanner.close();
+//     }
+// }
+
+//Crea un programa que pida al usuario un numero secreto
+// El programa  desde seguir pidiendo el numero
 
 import java.util.Scanner;
 
-class Ejercicio5 {
-    public static void main(String[] args) {
-
+public class Ejercicio6 {
+      public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
+        int numeroSecreto = 69;
+        int intento;
 
-        System.out.println("Introduce una nota del 0 al 10:");
-        double nota = scanner.nextDouble();
+        System.out.println("Adivina el numero secreto");
 
-        if (nota < 0 || nota > 10) {
-            System.out.println("La nota no es válida.");
-        } else if (nota < 5) {
-            System.out.println("Suspenso");
-        } else if (nota < 7) {
-            System.out.println("Aprobado");
-        } else if (nota < 9) {
-            System.out.println("Notable");
+        do{
+           System.out.println("Introduce un numero");
+           intento = scanner.nextInt();
+           
+           if (intento < numeroSecreto) {
+            System.out.println("El numero secreto es mayor. Intenta de nuevo");
+        }else if (intento > numeroSecreto) {
+            System.out.println("El numero secreto es menor. Intenta de nuevo");
         } else {
-            System.out.println("Sobresaliente");
-        }
+            System.out.println("¡Felicidades! Has adivinado el número secreto");
+      }
+        } while (intento != numeroSecreto);
 
-        scanner.close();
-    }
+         scanner.close();
+      }
 }
